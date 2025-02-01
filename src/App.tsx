@@ -1,5 +1,5 @@
 import './index.css'
-import {useGLTF, OrbitControls, PresentationControls, Environment, Center, ContactShadows, Sparkles} from '@react-three/drei';
+import {useGLTF, PresentationControls, Environment, Center, ContactShadows, Sparkles} from '@react-three/drei';
 import {useControls} from 'leva';
 
 export default function App() {
@@ -26,7 +26,7 @@ export default function App() {
 
             <PresentationControls
                 global
-                rotation={presentationControlsRotation}
+                rotation={[presentationControlsRotation[0], presentationControlsRotation[1], presentationControlsRotation[2]]}
                 polar={[presentationControlLimitsVertical.min, presentationControlLimitsVertical.max]}
                 azimuth={[presentationControlLimitsHorizontal.min, presentationControlLimitsHorizontal.max]}
                 config={ { mass: 5, tension: 100 } }
@@ -39,7 +39,7 @@ export default function App() {
                         intensity={30}
                         width={0.5}
                         height={2.5}
-                        position={screenLightPosition}
+                        position={[screenLightPosition[0], screenLightPosition[1], screenLightPosition[2]]}
                         rotation={[0, -Math.PI / 2, 0]}
                         color={screenLightColor}
                     />
