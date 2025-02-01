@@ -15,9 +15,7 @@ export default function App() {
 
     // Models
     const laptop = useGLTF('/models/laptop.glb');
-    laptop.scene.castShadow = true;
     const desk = useGLTF('/models/desk.glb');
-    desk.scene.receiveShadow = true;
 
     return (
         <>
