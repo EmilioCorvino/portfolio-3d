@@ -25,4 +25,5 @@ export default defineConfig({
         minify: 'esbuild',
         sourcemap: true,
     },
+    base: "https://emiliocorvino.github.io/portfolio-3d/",
 })
