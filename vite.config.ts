@@ -5,6 +5,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
+    publicDir: 'public/',
     plugins: [
         // Restart server on static/public file change
         restart({restart: ['public/**',]}),

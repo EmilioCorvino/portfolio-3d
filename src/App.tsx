@@ -14,8 +14,8 @@ export default function App() {
     const {presentationControlLimitsHorizontal} = isDebugMode ? useControls({presentationControlLimitsHorizontal: {min: -Math.PI / 4, max: Math.PI / 4}}) : {presentationControlLimitsHorizontal: {min: -Math.PI / 4, max: Math.PI / 4}};
 
     // Models
-    const laptop = useGLTF('/models/laptop.glb');
-    const desk = useGLTF('/models/desk.glb');
+    const laptop = useGLTF('./models/laptop.glb');
+    const desk = useGLTF('./models/desk.glb');
 
     return (
         <>
