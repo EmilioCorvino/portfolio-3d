@@ -24,5 +24,6 @@ dist-ssr
 *.sw?
 
 # Blender files
+blender
 *.blend
 *.bend1
