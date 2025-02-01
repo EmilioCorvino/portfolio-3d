@@ -4,14 +4,36 @@ import {useControls} from 'leva';
 
 export default function App() {
     const isDebugMode = import.meta.env.VITE_DEBUG_MODE === 'true';
-    const {backgroundColor} = isDebugMode ? useControls({backgroundColor: '#100d0d'}) : {backgroundColor: '#100d0d'};
-    const {dustColor} = isDebugMode ? useControls({dustColor: '#ffffff'}) : {dustColor: '#ffffff'};
-    const {screenLightColor} = isDebugMode ? useControls({screenLightColor: '#808080'}) : {screenLightColor: '#808080'};
-    const {screenLightPosition} = isDebugMode ? useControls({screenLightPosition: [-0.22, 1.40, 0]}) : {screenLightPosition: [-0.22, 1.40, 0]};
-    const {contactShadowsHeight} = isDebugMode ? useControls({contactShadowsHeight: -1.03}) : {contactShadowsHeight: -1.03};
-    const {presentationControlsRotation} = isDebugMode ? useControls({presentationControlsRotation: [0, -2.20, 0]}) : {presentationControlsRotation: [0, -2.20, 0]};
-    const {presentationControlLimitsVertical} = isDebugMode ? useControls({presentationControlLimitsVertical: {min: 0, max: 0}}) : {presentationControlLimitsVertical: {min: 0, max: 0}};
-    const {presentationControlLimitsHorizontal} = isDebugMode ? useControls({presentationControlLimitsHorizontal: {min: -Math.PI / 4, max: Math.PI / 4}}) : {presentationControlLimitsHorizontal: {min: -Math.PI / 4, max: Math.PI / 4}};
+    const {
+        backgroundColor,
+        dustColor,
+        screenLightColor,
+        screenLightPosition,
+        contactShadowsHeight,
+        presentationControlsRotation,
+        presentationControlLimitsVertical,
+        presentationControlLimitsHorizontal
+    } =
+        // eslint-disable-next-line react-hooks/rules-of-hooks
+        isDebugMode ? useControls({
+        backgroundColor: '#100d0d',
+        dustColor: '#ffffff',
+        screenLightColor: '#808080',
+        screenLightPosition: [-0.22, 1.40, 0],
+        contactShadowsHeight: -1.03,
+        presentationControlsRotation: [0, -2.20, 0],
+        presentationControlLimitsVertical: {min: 0, max: 0},
+        presentationControlLimitsHorizontal: {min: -Math.PI / 4, max: Math.PI / 4}
+    }) : {
+        backgroundColor: '#100d0d',
+        dustColor: '#ffffff',
+        screenLightColor: '#808080',
+        screenLightPosition: [-0.22, 1.40, 0],
+        contactShadowsHeight: -1.03,
+        presentationControlsRotation: [0, -2.20, 0],
+        presentationControlLimitsVertical: {min: 0, max: 0},
+        presentationControlLimitsHorizontal: {min: -Math.PI / 4, max: Math.PI / 4}
+    };
 
     // Models
     const laptop = useGLTF('./models/laptop.glb');
